@@ -98,14 +98,14 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 <span>2.</span> Manter Tarefa
 <span>3.</span> Manter Projeto
 <span>4.</span> Iniciar Sessão
-<span>5.</span> Usar Pomodoro
-<span>6.</span> Enviar Feedback
-<span>7.</span> Arrastar Tarefa
-<span>8.</span> Arrastar projeto
-<span>9.</span> Ver previsão da temperatura
-<span>10.</span> Configurar envio de email com resumo do dia
-<span>11.</span> Mudar tema da aplicação
-<span>12.</span> 
+<span>5.</span> Enviar Feedback
+<span>6.</span> Arrastar Tarefa
+<span>7.</span> Arrastar projeto
+<span>8.</span> Ver previsão da temperatura
+<span>9.</span> Configurar envio de email com resumo do dia
+<span>10.</span> Usar Pomodoro
+<span>11.</span> Iniciar Modo Foco
+<span>12.</span> Mudar tema da aplicação
 </pre>
 
 ---
@@ -122,7 +122,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Fluxo Principal   | 1. Ator digita um nome de usuário, email e senha nos campos do formulário |
 |                   | 2. Ator seleciona "Sign up"                                               |
 |                   | 3. Sistema redireciona para tela de login                                 |
-| Fluxo alternativo | 1. Ator seleciona "Sign up with Github"                                   |
+| Fluxo Alternativo | 1. Ator seleciona "Sign up with Github"                                   |
 |                   | 2. Sistema redireciona para telas de confirmação                          |
 |                   | 3. Ator seleciona "I accept"                                              |
 |                   | 4. Sistema redireciona para tela de login.                                |
@@ -183,13 +183,48 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Fluxo Principal   | 1. Ator digita email e senha nos campos do formulário                       |
 |                   | 2. Ator seleciona "Sign in"                                                 |
 |                   | 3. Sistema redireciona para tela inicial de "Today"                         |
-| Fluxo Principal   | 1. Ator seleciona "Sign in with Github"                                     |
+| Fluxo Alternativo | 1. Ator seleciona "Sign in with Github"                                     |
 |                   | 2. Sistema redireciona para telas de confirmação                            |
 |                   | 3. Ator seleciona "I accept"                                                |
 |                   | 4. Sistema redireciona para inicial de "Today"                              |
 | Extensões         | N/A                                                                         |
 | Pós-condições     | Ator na tela "Today"                                                        |
 | Regras de negócio | N/A                                                                         |
+
+---
+
+## Casos de Uso<span> ></span> <h3>Enviar Feedback</h3>
+
+| Propriedade       | Descrição                                                                         |
+| ----------------- | --------------------------------------------------------------------------------- |
+| Nome              | Enviar Feedback                                                                   |
+| Objetivo          | Enviar feedback da aplicação para os desenvolvedores                              |
+| Atores            | Usuário                                                                           |
+| Pré-condições     | O Ator precisa estar logado na aplicação e na tela de "Account Settings"          |
+| Trigger           | Ator seleciona "Send Feedback"                                                    |
+| Fluxo Principal   | 1. Sistema mostra uma caixa de texto para o usuário                               |
+|                   | 2. Ator digita sua mensagem na caixa de texto                                     |
+|                   | 3. Ator seleciona "Send Feedback"                                                 |
+| Extensões         | N/A                                                                               |
+| Pós-condições     | Sistema mostra uma notificação de agradecimento e retira a caixa de texto da tela |
+| Regras de negócio | N/A                                                                               |
+
+---
+
+## Casos de Uso<span> ></span> <h3>Configurar envio de email com resumo do dia</h3>
+
+| Propriedade       | Descrição                                                                              |
+| ----------------- | -------------------------------------------------------------------------------------- |
+| Nome              | Configurar envio de email com resumo do dia                                            |
+| Objetivo          | Configurar envio de email diário com informações das tarefas agendadas para aquele dia |
+| Atores            | Usuário                                                                                |
+| Pré-condições     | O Ator precisa estar logado na aplicação e na tela de "Account Settings"               |
+| Trigger           | N/A                                                                                    |
+| Fluxo Principal   | 1. Ator marca a caixa "Send daily reminder of my Tasks"                                |
+|                   | 2. Ator seleciona o botão "Save"                                                       |
+| Extensões         | N/A                                                                                    |
+| Pós-condições     | Sistema mostra uma notificação de que as configurações foram salvas com sucesso        |
+| Regras de negócio | N/A                                                                                    |
 
 ---
 
