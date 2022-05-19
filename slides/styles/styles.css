@@ -36,7 +36,8 @@ html,
 }
 
 .slidev-layout span {
-  @apply text-lg text-pink-400;
+  @apply text-lg text-pink-400 font-bold m-r-2;
+  font-style: normal;
 }
 
 .slidev-layout h3 {
@@ -100,4 +101,10 @@ html,
 
 .slidev-layout p {
   @apply m-0 p-0 inline;
+}
+
+.slidev-layout pre {
+  @apply font-sans;
+  font-style: normal !important;
+  line-height: 1.5rem;
 }

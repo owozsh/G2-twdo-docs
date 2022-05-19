@@ -88,6 +88,28 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 
 ---
 
+## Casos de Uso
+
+<pre>
+<span>1.</span> Manter Conta
+  <span>1.1</span> Registrar Conta
+  <span>1.2</span> Deletar Conta
+  <span>1.3</span> Alterar Email
+<span>2.</span> Manter Tarefa
+<span>3.</span> Manter Projeto
+<span>4.</span> Iniciar Sessão
+<span>5.</span> Usar Pomodoro
+<span>6.</span> Enviar Feedback
+<span>7.</span> Arrastar Tarefa
+<span>8.</span> Arrastar projeto
+<span>9.</span> Ver previsão da temperatura
+<span>10.</span> Configurar envio de email com resumo do dia
+<span>11.</span> Mudar tema da aplicação
+<span>12.</span> 
+</pre>
+
+---
+
 ## Casos de Uso<span> ></span> <h3>Registrar Conta</h3>
 
 | Propriedade       | Descrição                                                                 |
@@ -168,19 +190,6 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Extensões         | N/A                                                                         |
 | Pós-condições     | Ator na tela "Today"                                                        |
 | Regras de negócio | N/A                                                                         |
-
----
-
-## Casos de Uso
-
-5. Usar Pomodoro
-6. Arrastar Tarefa
-7. Arrastar projeto
-8. Ver previsão da temperatura
-9. Configurar envio de email com resumo do dia
-10. Manter Tarefa
-11. Manter Projeto
-12. Mudar tema da aplicação
 
 ---
 
