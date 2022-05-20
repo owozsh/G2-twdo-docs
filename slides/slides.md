@@ -242,3 +242,9 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Tarefa           | Tarefa ligada à um único usuário que conterá uma descrição, data e data limite.                                                                                                                                                                                                                                                        |
 | Projeto          | Conjunto de Tarefas.                                                                                                                                                                                                                                                                                                                   |
 | Pomodoro         | Timer utilizado para que o usuário possa focar em realizar uma tarefa dentro de um determinado período de tempo.                                                                                                                                                                                                                       |
+
+---
+
+## Links
+
+- https://balsamiq.cloud/sxy21mi/pqwza
