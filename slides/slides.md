@@ -53,7 +53,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 
 | RF  | Descrição                                                                             |
 | --- | ------------------------------------------------------------------------------------- |
-| RF1 | O sistema deve permitir que o usuário crie uma Tarefa                                 |
+| RF1 | O sistema deve permitir que o usuário crie uma Tarefa.                                |
 | RF2 | O sistema deve permitir que o usuário liste as Tarefas dele agendadas para aquele dia |
 | RF3 | O sitema deve permitir que o usuário liste as Tarefas agendadas para dias futuros     |
 | RF4 | O sitema deve permitir que o usuário marque uma Tarefa como feita                     |
@@ -67,14 +67,12 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 
 ## Requisitos Funcionais<span> ></span> <h3>Conta e Autenticação</h3>
 
-| RF   | Descrição                                                                                                                                                      |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| RF10 | O sitema deve permitir autenticação com Github                                                                                                                 |
-| RF11 | O sistema deve permitir que o usuário crie uma conta utilizando email ou através de oAuth com conta do Github                                                  |
-| RF12 | O sistema deve exigir que o usuário esteja logado no sistema para acessar quaisquer funcionalidades relacionadas à Tarefas, Projetos ou Configurações de Conta |
-| RF13 | O sistema deve permitir que o usuário se autentique fornecendo um endereço de email e senha ou utilizando uma conta do Github                                  |
-| RF14 | O sistema deve permitir que o usuário delete sua própria conta                                                                                                 |
-| RF15 | O sistema deve permitir que o usuário altere o email da sua própria conta                                                                                      |
+| RF   | Descrição                                                                                                     |
+| ---- | ------------------------------------------------------------------------------------------------------------- |
+| RF10 | O sistema deve permitir que o usuário crie uma conta utilizando email ou através de oAuth com conta do Github |
+| RF11 | O sistema deve permitir que o usuário se autentique                                                           |
+| RF12 | O sistema deve permitir que o usuário delete sua própria conta                                                |
+| RF13 | O sistema deve permitir que o usuário altere o email da sua própria conta                                     |
 
 ---
 
@@ -82,30 +80,34 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 
 | RF   | Descrição                                                                                                                               |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| RF16 | O sistema deve permitir que o usuário configure um envio de email automático para lembrá-lo das suas Tarefas agendadas para o dia atual |
-| RF17 | O sistema deve armazenar os registros de Usuários, Tarefas e Projetos em banco de dados próprio                                         |
-| RF18 | O sistema deve permitir que o usuário escolha entre tema claro ou escuro                                                                |
-| RF19 | O sistema deve permitir que o usuário utilize um timer pomodoro                                                                         |
+| RF14 | O sistema deve permitir que o usuário configure um envio de email automático para lembrá-lo das suas Tarefas agendadas para o dia atual |
+| RF15 | O sistema deve permitir que o usuário utilize um timer pomodoro                                                                         |
+| RF16 | O sistema deve permitir que o usuário possa enviar um feedback para os desenvolvedores.                                                 |
+| RF17 | O sistema deve permitir que o usuário inicie o "Modo Foco" da funcionalidade de "Pomodoro"                                              |
 
 ---
 
 ## Requisitos Não Funcionais
 
-| RNF  | Descrição                                                           |
-| ---- | ------------------------------------------------------------------- |
-| RNF1 | O sistema deve criptografar a senha do usuário antes de armazená-la |
-| RNF2 | O sistema não deve expor as chaves de autenticação do usuário       |
+| RNF  | Descrição                                                                                                               |
+| ---- | ----------------------------------------------------------------------------------------------------------------------- |
+| RNF1 | O sistema deve criptografar a senha do usuário utilizando a biblioteca brcypt.js antes de armazená-la no banco de dados |
+| RNF2 | O sistema deve armazenar os registros de Usuários, Tarefas e Projetos em banco de dados PostgreSQL                      |
+| RNF3 | O sistema deve permitir que o usuário escolha entre tema claro ou escuro                                                |
+| RNF4 | O sistema deve permitir que o usuário se autentique fornecendo email e senha ou pela API de oAuth do Github             |
 
 ---
 
 ## Regras de Negócio
 
-| RN  | Descrição                                                                                                                             |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| RN1 | Um usuário não pode cadastrar uma conta com um email já pertencente à outra conta cadastrada.                                         |
-| RN2 | Um usuário não pode alterar o email da sua conta para um email já pertencente à outra conta cadastrada.                               |
-| RN3 | Um usuário não pode associar uma Tarefa à mais de um Projeto.                                                                         |
-| RN4 | Um usuário só pode realizar qualquer operação de usuário (Manter tarefas, projetos, deletar conta, alterar email) após se autenticar. |
+| RN  | Descrição                                                                                                                                 |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| RN1 | Um usuário não pode cadastrar uma conta com um email já pertencente à outra conta cadastrada.                                             |
+| RN2 | Um usuário não pode alterar o email da sua conta para um email já pertencente à outra conta cadastrada.                                   |
+| RN3 | Um usuário não pode associar uma Tarefa à mais de um Projeto.                                                                             |
+| RN4 | Um usuário só pode realizar qualquer operação de usuário (Manter tarefas, projetos, deletar conta, alterar email) após se autenticar.     |
+| RN5 | Uma tarefa é criada preenchendo um formulário com ao menos a sua "descrição", podendo ser atribuída também uma "data" e uma "data limite" |
+| RN6 | Um projeto é criado preenchendo um formulário com o seu "nome" e atribuindo 0 ou mais tarefas para ele.                                   |
 
 ---
 
@@ -163,7 +165,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 |                   | 4. Sistema redireciona para tela de login.                                |
 | Extensões         | N/A                                                                       |
 | Pós-condições     | Ator na tela de login                                                     |
-| Regras de negócio | N/A                                                                       |
+| Regras de negócio | RN1                                                                       |
 
 ---
 
@@ -182,7 +184,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 |                   | 4. Sistema deleta a conta e redireciona para tela de sign up |
 | Extensões         | N/A                                                          |
 | Pós-condições     | Ator na tela de sign up                                      |
-| Regras de negócio | N/A                                                          |
+| Regras de negócio | RN4                                                          |
 
 ---
 
@@ -202,7 +204,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 |                   | 5. Sistema altera email, mantém o ator na página "Settings" e mostra uma notificação caso a ação seja bem-sucedida |
 | Extensões         | N/A                                                                                                                |
 | Pós-condições     | Ator na tela "Settings"                                                                                            |
-| Regras de negócio | RN2                                                                                                                |
+| Regras de negócio | RN2, RN4                                                                                                           |
 
 ---
 
@@ -242,7 +244,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 |                   | 3. Ator seleciona "Send Feedback"                                                 |
 | Extensões         | N/A                                                                               |
 | Pós-condições     | Sistema mostra uma notificação de agradecimento e retira a caixa de texto da tela |
-| Regras de negócio | N/A                                                                               |
+| Regras de negócio | RN4                                                                               |
 
 ---
 
@@ -259,7 +261,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 |                   | 2. Ator seleciona o botão "Save Changes"                                               |
 | Extensões         | N/A                                                                                    |
 | Pós-condições     | Sistema mostra uma notificação de que as configurações foram salvas com sucesso        |
-| Regras de negócio | N/A                                                                                    |
+| Regras de negócio | RN4                                                                                    |
 
 ---
 
