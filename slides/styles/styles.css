@@ -108,3 +108,10 @@ html,
   font-style: normal !important;
   line-height: 1.5rem;
 }
+
+.slidev-layout img {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  height: calc(100% - 10rem);
+}

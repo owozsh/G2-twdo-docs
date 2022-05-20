@@ -141,7 +141,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 
 ## Diagrama de Casos de Uso
 
-![Local Image](/use_cases.png)
+<img src="/use_cases.png">
 
 ---
 
