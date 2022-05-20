@@ -100,7 +100,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 <span>4.</span> Iniciar Sessão
 <span>5.</span> Enviar Feedback
 <span>6.</span> Arrastar Tarefa
-<span>7.</span> Arrastar projeto
+<span>7.</span> Reordenar projeto
 <span>8.</span> Ver previsão da temperatura
 <span>9.</span> Configurar envio de email com resumo do dia
 <span>10.</span> Usar Pomodoro
