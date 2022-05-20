@@ -139,7 +139,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Nome              | Deletar conta                                                |
 | Objetivo          | Deletar conta da aplicação                                   |
 | Atores            | Usuário                                                      |
-| Pré-condições     | Ator precisa estar logado e na página "Account settings"     |
+| Pré-condições     | Ator precisa estar logado e na página "Settings"             |
 | Trigger           | Ator clica em "Delete your Account"                          |
 | Fluxo Principal   | 1. Ator clica no botão "Delete your Account"                 |
 |                   | 2. Sistema pede uma confirmação da ação                      |
@@ -153,21 +153,21 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 
 ## Casos de Uso<span> ></span> <h3>1.3 - Alterar Email</h3>
 
-| Propriedade       | Descrição                                                                                                                  |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Nome              | Alterar email                                                                                                              |
-| Objetivo          | Alterar endereço de email da conta                                                                                         |
-| Atores            | Usuário                                                                                                                    |
-| Pré-condições     | Ator precisa estar logado e na página "Account settings"                                                                   |
-| Trigger           | Ator clica em "Change my email"                                                                                            |
-| Fluxo Principal   | 1. Ator preenche formulário com novo email                                                                                 |
-|                   | 2. Ator clica em "Save Changes"                                                                                            |
-|                   | 3. Sistema pede uma confirmação da ação                                                                                    |
-|                   | 4. Ator confirma a ação                                                                                                    |
-|                   | 5. Sistema altera email, mantém o ator na página "Account Settings" e mostra uma notificação caso a ação seja bem-sucedida |
-| Extensões         | N/A                                                                                                                        |
-| Pós-condições     | Ator na tela "Account Settings"                                                                                            |
-| Regras de negócio | RN2                                                                                                                        |
+| Propriedade       | Descrição                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Nome              | Alterar email                                                                                                      |
+| Objetivo          | Alterar endereço de email da conta                                                                                 |
+| Atores            | Usuário                                                                                                            |
+| Pré-condições     | Ator precisa estar logado e na página "Settings"                                                                   |
+| Trigger           | Ator clica em "Change my email"                                                                                    |
+| Fluxo Principal   | 1. Ator preenche formulário com novo email                                                                         |
+|                   | 2. Ator clica em "Save Changes"                                                                                    |
+|                   | 3. Sistema pede uma confirmação da ação                                                                            |
+|                   | 4. Ator confirma a ação                                                                                            |
+|                   | 5. Sistema altera email, mantém o ator na página "Settings" e mostra uma notificação caso a ação seja bem-sucedida |
+| Extensões         | N/A                                                                                                                |
+| Pós-condições     | Ator na tela "Settings"                                                                                            |
+| Regras de negócio | RN2                                                                                                                |
 
 ---
 
@@ -200,7 +200,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Nome              | Enviar Feedback                                                                   |
 | Objetivo          | Enviar feedback da aplicação para os desenvolvedores                              |
 | Atores            | Usuário                                                                           |
-| Pré-condições     | O Ator precisa estar logado na aplicação e na tela de "Account Settings"          |
+| Pré-condições     | O Ator precisa estar logado na aplicação e na tela de "Settings"                  |
 | Trigger           | Ator seleciona "Send Feedback"                                                    |
 | Fluxo Principal   | 1. Sistema mostra uma caixa de texto para o usuário                               |
 |                   | 2. Ator digita sua mensagem na caixa de texto                                     |
@@ -218,7 +218,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Nome              | Configurar envio de email com resumo do dia                                            |
 | Objetivo          | Configurar envio de email diário com informações das tarefas agendadas para aquele dia |
 | Atores            | Usuário                                                                                |
-| Pré-condições     | O Ator precisa estar logado na aplicação e na tela de "Account Settings"               |
+| Pré-condições     | O Ator precisa estar logado na aplicação e na tela de "Settings"                       |
 | Trigger           | N/A                                                                                    |
 | Fluxo Principal   | 1. Ator marca a caixa "Send daily reminder of my Tasks"                                |
 |                   | 2. Ator seleciona o botão "Save Changes"                                               |
