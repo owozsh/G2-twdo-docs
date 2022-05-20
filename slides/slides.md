@@ -110,6 +110,12 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 
 ---
 
+## Diagrama de Casos de Uso
+
+![Local Image](/use_cases.png)
+
+---
+
 ## Casos de Uso<span> ></span> <h3>1.1 - Registrar Conta</h3>
 
 | Propriedade       | Descrição                                                                 |
