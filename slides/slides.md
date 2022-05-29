@@ -156,15 +156,19 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Atores            | Usuário                                                                   |
 | Pré-condições     | Ator na tela de cadastro                                                  |
 | Trigger           | Ator seleciona "Sign up"                                                  |
-| Fluxo Principal   | 1. Ator digita um nome de usuário, email e senha nos campos do formulário |
+| Fluxo Principal   | 1. Ator digita um nome de usuário, email e senha nos campos do formulário [A1] [A2] |
 |                   | 2. Ator seleciona "Sign up"                                               |
 |                   | 3. Sistema redireciona para tela de login                                 |
-| Fluxo Alternativo | 1. Ator seleciona "Sign up with Github"                                   |
-|                   | 2. Sistema redireciona para telas de confirmação                          |
-|                   | 3. Ator seleciona "I accept"                                              |
-|                   | 4. Sistema redireciona para tela de login.                                |
+| Fluxo Alternativo | A1 - Registrar com Github                                                 |
+|                   | A1.1 Ator seleciona "Sign up with Github"                                 |
+|                   | A1.2 Sistema redireciona para telas de confirmação                        |
+|                   | A1.3 Ator seleciona "I accept"                                            |
+|                   | A1.4 Sistema redireciona para tela de login.                              |
+| Fluxo Alternativo | A2 - E-mail já registrado                                                 |
+|                   | A2.1 - O sistema apresenta uma mensagem de erro                           |
+|                   | A2.2 - Volta para o passo 1                                               |
 | Extensões         | N/A                                                                       |
-| Pós-condições     | Ator na tela de login                                                     |
+| Pós-condições     | O ator é redirecionado para a tela de login                               |
 | Regras de negócio | RN1                                                                       |
 
 ---
@@ -182,8 +186,9 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 |                   | 2. Sistema pede uma confirmação da ação                      |
 |                   | 3. Ator confirma a ação                                      |
 |                   | 4. Sistema deleta a conta e redireciona para tela de sign up |
+| Fluxo Alternativo | N/A                                                          |
 | Extensões         | N/A                                                          |
-| Pós-condições     | Ator na tela de sign up                                      |
+| Pós-condições     | O Ator é redirecionado para a tela de sign up                |
 | Regras de negócio | RN4                                                          |
 
 ---
@@ -197,13 +202,15 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Atores            | Usuário                                                                                                            |
 | Pré-condições     | Ator precisa estar logado e na página "Settings"                                                                   |
 | Trigger           | Ator clica em "Change my email"                                                                                    |
-| Fluxo Principal   | 1. Ator preenche formulário com novo email                                                                         |
-|                   | 2. Ator clica em "Save Changes"                                                                                    |
-|                   | 3. Sistema pede uma confirmação da ação                                                                            |
-|                   | 4. Ator confirma a ação                                                                                            |
-|                   | 5. Sistema altera email, mantém o ator na página "Settings" e mostra uma notificação caso a ação seja bem-sucedida |
+| Fluxo Principal   | 1. Ator preenche formulário com novo email e clica em "Save Changes"                                               |
+|                   | 2. Sistema pede uma confirmação da ação                                                                            |
+|                   | 3. Ator confirma a ação [A1]                                                                                       |
+|                   | 4. Sistema altera email e mostra uma notificação                                                                   |
+| Fluxo Alternativo | A1 - E-mail já registrado                                                                                          |
+|                   | A1.1 - O sistema apresenta uma mensagem de erro                                                                    |
+|                   | A1.2 - Volta para o passo 1                                                                                        |
 | Extensões         | N/A                                                                                                                |
-| Pós-condições     | Ator na tela "Settings"                                                                                            |
+| Pós-condições     | O Ator permanece na tela "Settings"                                                                                |
 | Regras de negócio | RN2, RN4                                                                                                           |
 
 ---
@@ -225,7 +232,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 |                   | 3. Ator seleciona "I accept"                                                |
 |                   | 4. Sistema redireciona para inicial de "Today"                              |
 | Extensões         | N/A                                                                         |
-| Pós-condições     | Ator na tela "Today"                                                        |
+| Pós-condições     | O Ator é redirecionado para a tela "Today"                                  |
 | Regras de negócio | N/A                                                                         |
 
 ---
@@ -242,6 +249,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Fluxo Principal   | 1. Sistema mostra uma caixa de texto para o usuário                               |
 |                   | 2. Ator digita sua mensagem na caixa de texto                                     |
 |                   | 3. Ator seleciona "Send Feedback"                                                 |
+| Fluxo Alternativo | N/A                                                                               |
 | Extensões         | N/A                                                                               |
 | Pós-condições     | Sistema mostra uma notificação de agradecimento e retira a caixa de texto da tela |
 | Regras de negócio | RN4                                                                               |
@@ -256,11 +264,11 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | Objetivo          | Configurar envio de email diário com informações das tarefas agendadas para aquele dia |
 | Atores            | Usuário                                                                                |
 | Pré-condições     | O Ator precisa estar logado na aplicação e na tela de "Settings"                       |
-| Trigger           | N/A                                                                                    |
-| Fluxo Principal   | 1. Ator marca a caixa "Send daily reminder of my Tasks"                                |
-|                   | 2. Ator seleciona o botão "Save Changes"                                               |
+| Trigger           | O Ator clica na caixa "Send daily reminder of my Tasks"                                |
+| Fluxo Principal   | 1. Ator seleciona o botão "Save Changes"                                               |
+| Fluxo Alternativo | N/A                                                                                    |
 | Extensões         | N/A                                                                                    |
-| Pós-condições     | Sistema mostra uma notificação de que as configurações foram salvas com sucesso        |
+| Pós-condições     | O Sistema mostra uma notificação de que as configurações foram salvas com sucesso      |
 | Regras de negócio | RN4                                                                                    |
 
 ---
