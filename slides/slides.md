@@ -28,7 +28,7 @@ O twdo é um organizador pessoal de tarefas minimalista, pensado em ser um ambie
 Ele permite que o usuário crie uma conta (utilizando e-mail pessoal ou conta existente no GitHub) e já comece a criar suas tarefas. As tarefas podem ser agrupadas em projetos e arrastadas ao longo da tela para ordená-las. Dependendo da direção que o usuário arraste a tarefa, ela pode ser adicionada para um projeto ou iniciar um timer pomodoro para a realização da tarefa.
 <br>
 <br>
-A aplicação também conta com uma área reservada para as tarefas do dia atual (que possui também informações relacionadas à temperatura), de maneira que o usuário possa configurar um envio automático de e-mail para avisá-lo das tarefas que ele organizou para aquele dia. As tarefas também ser agendadas para serem realizadas em um determinado dia, com uma área dedicada do aplicativo para listar essas tarefas.
+A aplicação também conta com uma área reservada para as tarefas do dia atual (que possui também informações relacionadas à temperatura climática), de maneira que o usuário possa configurar um envio automático de e-mail para avisá-lo das tarefas que ele organizou para aquele dia. As tarefas também podem ser agendadas para serem realizadas em um determinado dia, com uma área dedicada do aplicativo para listar essas tarefas.
 
 ---
 
@@ -84,7 +84,7 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | RF15 | O sistema deve permitir que o usuário utilize um timer pomodoro                                                                         |
 | RF16 | O sistema deve permitir que o usuário possa enviar um feedback para os desenvolvedores.                                                 |
 | RF17 | O sistema deve permitir que o usuário inicie o "Modo Foco" da funcionalidade de "Pomodoro"                                              |
-
+| RF18 | O sistema deve armazenar os registros de Usuários, Tarefas e Projetos em banco de dados PostgreSQL                                      |
 ---
 
 ## Requisitos Não Funcionais
@@ -92,9 +92,8 @@ A aplicação também conta com uma área reservada para as tarefas do dia atual
 | RNF  | Descrição                                                                                                               |
 | ---- | ----------------------------------------------------------------------------------------------------------------------- |
 | RNF1 | O sistema deve criptografar a senha do usuário utilizando a biblioteca brcypt.js antes de armazená-la no banco de dados |
-| RNF2 | O sistema deve armazenar os registros de Usuários, Tarefas e Projetos em banco de dados PostgreSQL                      |
-| RNF3 | O sistema deve permitir que o usuário escolha entre tema claro ou escuro                                                |
-| RNF4 | O sistema deve permitir que o usuário se autentique fornecendo email e senha ou pela API de oAuth do Github             |
+| RNF2 | O sistema deve permitir que o usuário ao alterar um tema tenha as opções de modo claro e modo escuro que auxiliam na melhor visualização do sistema em diferentes horas do dia                                                                                                          |
+| RNF3 | O sistema deve permitir ao usuário a opção de autenticação por meio da integração com a API do Github                   |
 
 ---
 
